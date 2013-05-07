@@ -1,4 +1,7 @@
 PiadAPI::Application.routes.draw do
+  resources :piadineria
+  match 'piadineria/latitudine/:latitudine/longitudine/:longitudine' => 'piadineria#GetPiadinerie'
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

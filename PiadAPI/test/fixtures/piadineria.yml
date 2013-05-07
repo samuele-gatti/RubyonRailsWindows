@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  ragioneSociale: MyString
+  indirizzo: MyString
+  comune: MyString
+  provincia: MyString
+  regione: MyString
+  latitudine: MyString
+  longitudine: MyString
+
+two:
+  ragioneSociale: MyString
+  indirizzo: MyString
+  comune: MyString
+  provincia: MyString
+  regione: MyString
+  latitudine: MyString
+  longitudine: MyString

@@ -1,0 +1,45 @@
+<%= form_for(@piadinerium) do |f| %>
+  <% if @piadinerium.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@piadinerium.errors.count, "error") %> prohibited this piadinerium from being saved:</h2>
+
+      <ul>
+      <% @piadinerium.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :ragioneSociale %><br />
+    <%= f.text_field :ragioneSociale %>
+  </div>
+  <div class="field">
+    <%= f.label :indirizzo %><br />
+    <%= f.text_field :indirizzo %>
+  </div>
+  <div class="field">
+    <%= f.label :comune %><br />
+    <%= f.text_field :comune %>
+  </div>
+  <div class="field">
+    <%= f.label :provincia %><br />
+    <%= f.text_field :provincia %>
+  </div>
+  <div class="field">
+    <%= f.label :regione %><br />
+    <%= f.text_field :regione %>
+  </div>
+  <div class="field">
+    <%= f.label :latitudine %><br />
+    <%= f.text_field :latitudine %>
+  </div>
+  <div class="field">
+    <%= f.label :longitudine %><br />
+    <%= f.text_field :longitudine %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
