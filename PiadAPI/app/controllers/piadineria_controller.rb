@@ -7,7 +7,7 @@ class PiadineriaController < ApplicationController
     @piadineria.each do |piad|
 		piad.class.module_eval {attr_accessor :distanza}
 		piad.class.module_eval {attr_accessor :tempo}
-		piad.distanza = "25,2 km"
+		piad.distanza = piad.distance_to([params[:latitudine], params[:longitudine]], :km);
 		piad.tempo = "10 min"
     end
 		
