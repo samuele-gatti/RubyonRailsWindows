@@ -15,14 +15,19 @@ ActiveRecord::Schema.define(:version => 20130507072208) do
 
   create_table "piadineria", :force => true do |t|
     t.string   "ragioneSociale"
-    t.string   "indirizzo"
-    t.string   "comune"
-    t.string   "provincia"
-    t.string   "regione"
-    t.string   "latitudine"
-    t.string   "longitudine"
+    t.string   "address"
+    t.string   "city"
+    t.string   "province"
+    t.string   "region"
+    t.float    "latitude"
+    t.float    "longitude"
     t.datetime "created_at",     :null => false
     t.datetime "updated_at",     :null => false
+  end
+
+  create_table "venues", :force => true do |t|
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
   end
 
 end

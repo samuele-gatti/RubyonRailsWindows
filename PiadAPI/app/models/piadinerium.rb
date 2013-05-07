@@ -1,3 +1,3 @@
 class Piadinerium < ActiveRecord::Base
-  attr_accessible :comune, :indirizzo, :latitudine, :longitudine, :provincia, :ragioneSociale, :regione
+  attr_accessible :city, :address, :latitude, :longitude, :province, :ragioneSociale, :region
 end

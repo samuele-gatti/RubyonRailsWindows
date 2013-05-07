@@ -2,12 +2,12 @@ class CreatePiadineria < ActiveRecord::Migration
   def change
     create_table :piadineria do |t|
       t.string :ragioneSociale
-      t.string :indirizzo
-      t.string :comune
-      t.string :provincia
-      t.string :regione
-      t.string :latitudine
-      t.string :longitudine
+      t.string :address
+      t.string :city
+      t.string :province
+      t.string :region
+      t.float :latitude
+      t.float :longitude
 
       t.timestamps
     end

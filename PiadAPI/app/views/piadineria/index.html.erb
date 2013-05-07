@@ -17,12 +17,12 @@
 <% @piadineria.each do |piadinerium| %>
   <tr>
     <td><%= piadinerium.ragioneSociale %></td>
-    <td><%= piadinerium.indirizzo %></td>
-    <td><%= piadinerium.comune %></td>
-    <td><%= piadinerium.provincia %></td>
-    <td><%= piadinerium.regione %></td>
-    <td><%= piadinerium.latitudine %></td>
-    <td><%= piadinerium.longitudine %></td>
+    <td><%= piadinerium.address %></td>
+    <td><%= piadinerium.city %></td>
+    <td><%= piadinerium.province %></td>
+    <td><%= piadinerium.region %></td>
+    <td><%= piadinerium.latitude %></td>
+    <td><%= piadinerium.longitude %></td>
     <td><%= link_to 'Show', piadinerium %></td>
     <td><%= link_to 'Edit', edit_piadinerium_path(piadinerium) %></td>
     <td><%= link_to 'Destroy', piadinerium, method: :delete, data: { confirm: 'Are you sure?' } %></td>
