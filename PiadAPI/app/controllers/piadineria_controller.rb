@@ -1,4 +1,8 @@
+require 'net/http'
+
 class PiadineriaController < ApplicationController
+  
+  
   
   #GET /piadineria/latitude/1/longitude/1
   #GET /piadineria/latitude/1/longitude/1.json
@@ -8,7 +12,24 @@ class PiadineriaController < ApplicationController
 		piad.class.module_eval {attr_accessor :distanza}
 		piad.class.module_eval {attr_accessor :tempo}
 		piad.distanza = piad.distance_to([params[:latitudine], params[:longitudine]], :km).round(2);
+		
+		#urlTime = URI.parse('http://maps.googleapis.com/maps/api/directions/json?origin=Toronto&destination=Montreal&sensor=false');
+		#reqTime = Net::HTTP::Get.new(urlTime.path)
+		#resTime = Net::HTTP.start(urlTime.host, urlTime.port) {|http| http.request(reqTime) }
+        #@result = resTime.body		
+		
+		
+		uri = URI('http://maps.googleapis.com/maps/api/directions/json')
+        params = { :origin => "Toronto", :destination => "Montreal", :sensor => false }
+        uri.query = URI.encode_www_form(params)
+
+        res = Net::HTTP.get_response(uri)
+		@result = res.body
+		
 		piad.tempo = "10 min"
+		
+		
+		
     end
 	@piadineria.sort_by!{|p| p.distanza}	
 	respond_to do |format|
