@@ -7,12 +7,12 @@ class PiadineriaController < ApplicationController
     @piadineria.each do |piad|
 		piad.class.module_eval {attr_accessor :distanza}
 		piad.class.module_eval {attr_accessor :tempo}
-		piad.distanza = piad.distance_to([params[:latitudine], params[:longitudine]], :km);
+		piad.distanza = piad.distance_to([params[:latitudine], params[:longitudine]], :km).round(2);
 		piad.tempo = "10 min"
     end
-		
+	@piadineria.sort_by!{|p| p.distanza}	
 	respond_to do |format|
-	  format.html # GetPiadinerie.html.erb
+	  format.html 
       format.json { render json: @piadineria }
     end
   end
