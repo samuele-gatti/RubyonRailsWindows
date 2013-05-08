@@ -1,0 +1,21 @@
+<%= form_for(@listino_piadine) do |f| %>
+  <% if @listino_piadine.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@listino_piadine.errors.count, "error") %> prohibited this listino_piadine from being saved:</h2>
+
+      <ul>
+      <% @listino_piadine.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :piadineria_id %><br />
+    <%= f.number_field :piadineria_id %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

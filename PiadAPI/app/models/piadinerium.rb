@@ -7,4 +7,6 @@ class Piadinerium < ActiveRecord::Base
   
   geocoded_by :fullAddress
   after_validation :geocode
+  
+  has_one :listinoPiadine 
 end

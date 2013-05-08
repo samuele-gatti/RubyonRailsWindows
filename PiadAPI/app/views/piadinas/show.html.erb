@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Nome:</b>
+  <%= @piadina.nome %>
+</p>
+
+<p>
+  <b>Ingredienti:</b>
+  <%= @piadina.ingredienti %>
+</p>
+
+<p>
+  <b>Prezzo:</b>
+  <%= @piadina.prezzo %>
+</p>
+
+<p>
+  <b>Link:</b>
+  <%= @piadina.link %>
+</p>
+
+<p>
+  <b>Descrizione:</b>
+  <%= @piadina.descrizione %>
+</p>
+
+
+<%= link_to 'Edit', edit_piadina_path(@piadina) %> |
+<%= link_to 'Back', piadinas_path %>

@@ -1,0 +1,2 @@
+module PiadinasHelper
+end

@@ -1,0 +1,23 @@
+<h1>Listing listino_piadines</h1>
+
+<table>
+  <tr>
+    <th>Piadineria</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @listino_piadines.each do |listino_piadine| %>
+  <tr>
+    <td><%= listino_piadine.piadineria_id %></td>
+    <td><%= link_to 'Show', listino_piadine %></td>
+    <td><%= link_to 'Edit', edit_listino_piadine_path(listino_piadine) %></td>
+    <td><%= link_to 'Destroy', listino_piadine, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Listino piadine', new_listino_piadine_path %>

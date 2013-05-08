@@ -1,0 +1,20 @@
+<h1>Listing piadineria</h1>
+
+<table>
+  <tr>
+    <th>Nome</th>
+    <th>Ingredienti</th>
+    <th>Link</th>
+    <th>Prezzo</th>    
+  </tr>
+   
+
+<% @listinoPiadine.each do |piadina| %>
+  <tr>
+    <td><%= piadina.nome %></td>
+    <td><%= piadina.ingredienti %></td>
+    <td><%= piadina.link %></td>
+    <td><%= piadina.prezzo %></td>    
+  </tr>
+<% end %>
+</table>

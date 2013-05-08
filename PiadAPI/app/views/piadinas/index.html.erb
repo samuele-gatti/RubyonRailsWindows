@@ -1,0 +1,31 @@
+<h1>Listing piadinas</h1>
+
+<table>
+  <tr>
+    <th>Nome</th>
+    <th>Ingredienti</th>
+    <th>Prezzo</th>
+    <th>Link</th>
+    <th>Descrizione</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @piadinas.each do |piadina| %>
+  <tr>
+    <td><%= piadina.nome %></td>
+    <td><%= piadina.ingredienti %></td>
+    <td><%= piadina.prezzo %></td>
+    <td><%= piadina.link %></td>
+    <td><%= piadina.descrizione %></td>
+    <td><%= link_to 'Show', piadina %></td>
+    <td><%= link_to 'Edit', edit_piadina_path(piadina) %></td>
+    <td><%= link_to 'Destroy', piadina, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Piadina', new_piadina_path %>

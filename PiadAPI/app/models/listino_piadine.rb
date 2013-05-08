@@ -1,3 +1,4 @@
 class ListinoPiadine < ActiveRecord::Base
-  attr_accessible :piadineria_id
+  belongs_to :piadinerium
+  has_many :piadinas
 end

@@ -27,12 +27,12 @@ ActiveRecord::Schema.define(:version => 20130508083517) do
     t.decimal  "prezzo"
     t.string   "link"
     t.text     "descrizione"
-    t.integer  "listinPiadine_id"
-    t.datetime "created_at",       :null => false
-    t.datetime "updated_at",       :null => false
+    t.integer  "listino_piadine_id"
+    t.datetime "created_at",         :null => false
+    t.datetime "updated_at",         :null => false
   end
 
-  add_index "piadinas", ["listinPiadine_id"], :name => "index_piadinas_on_listinPiadine_id"
+  add_index "piadinas", ["listino_piadine_id"], :name => "index_piadinas_on_listino_piadine_id"
 
   create_table "piadineria", :force => true do |t|
     t.string   "ragioneSociale"
@@ -44,11 +44,6 @@ ActiveRecord::Schema.define(:version => 20130508083517) do
     t.float    "longitude"
     t.datetime "created_at",     :null => false
     t.datetime "updated_at",     :null => false
-  end
-
-  create_table "venues", :force => true do |t|
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
   end
 
 end
