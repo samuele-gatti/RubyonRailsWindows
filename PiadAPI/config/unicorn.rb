@@ -3,7 +3,7 @@ rker_processes 2
 timeout 30
 listen "/tmp/unicorn.blog.sock"
  
-root = "/home/railsuser/sites/PiadAPI/current"
+root = "/home/railsuser/sites/PiadAPI"
  
 working_directory root
  
