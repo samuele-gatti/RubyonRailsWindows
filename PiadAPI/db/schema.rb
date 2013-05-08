@@ -11,7 +11,28 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130507072208) do
+ActiveRecord::Schema.define(:version => 20130508083517) do
+
+  create_table "listino_piadines", :force => true do |t|
+    t.integer  "piadineria_id"
+    t.datetime "created_at",    :null => false
+    t.datetime "updated_at",    :null => false
+  end
+
+  add_index "listino_piadines", ["piadineria_id"], :name => "index_listino_piadines_on_piadineria_id"
+
+  create_table "piadinas", :force => true do |t|
+    t.string   "nome"
+    t.text     "ingredienti"
+    t.decimal  "prezzo"
+    t.string   "link"
+    t.text     "descrizione"
+    t.integer  "listinPiadine_id"
+    t.datetime "created_at",       :null => false
+    t.datetime "updated_at",       :null => false
+  end
+
+  add_index "piadinas", ["listinPiadine_id"], :name => "index_piadinas_on_listinPiadine_id"
 
   create_table "piadineria", :force => true do |t|
     t.string   "ragioneSociale"
