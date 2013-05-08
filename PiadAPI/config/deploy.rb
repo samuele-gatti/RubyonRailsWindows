@@ -1,6 +1,6 @@
 require "bundler/capistrano"
 
-
+set :bundle_flags, "--no-deployment --quiet"
 set :application, "PiadAPI"
 set :user, "railsuser"
 
