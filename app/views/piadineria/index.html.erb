@@ -1,8 +1,8 @@
-<h1>Listing piadineria</h1>
+<h1>Elenco piadinerie</h1>
 
 <table>
   <tr>
-    <th>Ragionesociale</th>
+    <th>Ragione sociale</th>
     <th>Indirizzo</th>
     <th>Comune</th>
     <th>Provincia</th>
@@ -23,13 +23,13 @@
     <td><%= piadinerium.region %></td>
     <td><%= piadinerium.latitude %></td>
     <td><%= piadinerium.longitude %></td>
-    <td><%= link_to 'Show', piadinerium %></td>
-    <td><%= link_to 'Edit', edit_piadinerium_path(piadinerium) %></td>
-    <td><%= link_to 'Destroy', piadinerium, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    <td><%= link_to 'Dettaglio', piadinerium %></td>
+    <td><%= link_to 'Modifica', edit_piadinerium_path(piadinerium) %></td>
+    <td><%= link_to 'Elimina', piadinerium, method: :delete, data: { confirm: 'Are you sure?' } %></td>
   </tr>
 <% end %>
 </table>
 
 <br />
 
-<%= link_to 'New Piadinerium', new_piadinerium_path %>
+<%= link_to 'Aggiungi', new_piadinerium_path %>
