@@ -1,0 +1,29 @@
+<h1>Listing piadineria</h1>
+
+<table>
+  <tr>
+    <th>Ragionesociale</th>
+    <th>Indirizzo</th>
+    <th>Comune</th>
+    <th>Provincia</th>
+    <th>Regione</th>
+    <th>Latitudine</th>
+    <th>Longitudine</th>
+    <th>Distanza</th>
+    <th>Tempo</th>
+  </tr>
+
+<% @piadineria.each do |piadinerium| %>
+  <tr>
+    <td><%= piadinerium.ragioneSociale %></td>
+    <td><%= piadinerium.address %></td>
+    <td><%= piadinerium.city %></td>
+    <td><%= piadinerium.province %></td>
+    <td><%= piadinerium.region %></td>
+    <td><%= piadinerium.latitude %></td>
+    <td><%= piadinerium.longitude %></td>
+	<td><%= piadinerium.distanza %></td>
+	<td><%= piadinerium.tempo %></td>
+  </tr>
+<% end %>
+</table>
