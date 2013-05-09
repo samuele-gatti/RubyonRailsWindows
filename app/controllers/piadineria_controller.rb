@@ -29,21 +29,6 @@ class PiadineriaController < ApplicationController
     end
   end
   
-  #GET /listinoPiadine/1
-  #GET /listinoPiadine/1.json
-  def GetListinoPiadine
-     
-    listino = ListinoPiadine.where("piadineria_id = " + params[:id]).first()
-    @listinoPiadine = listino.piadinas
-    
-    respond_to do |format|
-      format.html 
-      format.json { render json: @listinoPiadine }
-    end
-    
-  end 
-    
-	
   # GET /piadineria
   # GET /piadineria.json
   def index
