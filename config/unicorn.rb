@@ -1,5 +1,5 @@
 
-rker_processes 2
+worker_processes 2
 timeout 30
 listen "/tmp/unicorn.blog.sock"
  
