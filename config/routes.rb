@@ -1,7 +1,9 @@
 PiadAPI::Application.routes.draw do
+  get "listino_piadine/GetListinoPiadine"
+
   resources :piadineria
   match 'piadineria/latitudine/:latitudine/longitudine/:longitudine' => 'piadineria#GetPiadinerie', :constraints => {:latitudine => /\-*\d+.\d+/ , :longitudine => /\-*\d+.\d+/ }
-  match 'listinoPiadine/:id' => 'piadineria#GetListinoPiadine'
+  match 'listinoPiadine/:id' => 'listinoPiadine#GetListinoPiadine'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
