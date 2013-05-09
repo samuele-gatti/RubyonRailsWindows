@@ -1,24 +1,31 @@
 <h1>Listino piadine</h1>
 
-<table>
-  <tr>
-  	<th>ID</th>
-    <th>Nome</th>
-    <th>Ingredienti</th>
-    <th>Link</th>
-    <th>Prezzo</th>
-    <th>Descrizione</th>    
-  </tr>
-   
+<% if @listinoPiadine.empty? %>
+	Nessun listino inserito
 
-<% @listinoPiadine.each do |piadina| %>
-  <tr>
-  	<td><%= piadina.id %></td>
-    <td><%= piadina.nome %></td>
-    <td><%= piadina.ingredienti %></td>
-    <td><%= piadina.link %></td>
-    <td><%= piadina.prezzo %></td>  
-    <td><%= piadina.descrizione %></td>
-  </tr>
+<% else %>
+		<table>
+			<tr>
+				<th>ID</th>
+				<th>Nome</th>
+				<th>Ingredienti</th>
+				<th>Link</th>
+				<th>Prezzo</th>
+				<th>Descrizione</th>    
+			</tr>
+
+
+			<% @listinoPiadine.each do |piadina| %>
+			<tr>
+				<td><%= piadina.id %></td>
+				<td><%= piadina.nome %></td>
+				<td><%= piadina.ingredienti %></td>
+				<td><%= piadina.link %></td>
+				<td><%= piadina.prezzo %></td>  
+				<td><%= piadina.descrizione %></td>
+			</tr>
+		<% end %>
+
 <% end %>
+
 </table>
