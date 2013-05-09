@@ -1,0 +1,40 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Ragionesociale:</b>
+  <%= @piadinerium.ragioneSociale %>
+</p>
+
+<p>
+  <b>Indirizzo:</b>
+  <%= @piadinerium.address %>
+</p>
+
+<p>
+  <b>Comune:</b>
+  <%= @piadinerium.city %>
+</p>
+
+<p>
+  <b>Provincia:</b>
+  <%= @piadinerium.province %>
+</p>
+
+<p>
+  <b>Regione:</b>
+  <%= @piadinerium.region %>
+</p>
+
+<p>
+  <b>Latitudine:</b>
+  <%= @piadinerium.latitude %>
+</p>
+
+<p>
+  <b>Longitudine:</b>
+  <%= @piadinerium.longitude %>
+</p>
+
+
+<%= link_to 'Edit', edit_piadinerium_path(@piadinerium) %> |
+<%= link_to 'Back', piadineria_path %>
