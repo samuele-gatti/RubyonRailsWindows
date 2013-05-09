@@ -6,7 +6,7 @@ set :user, "railsuser"
 
 
 set :scm, :git
-set :repository, "git@github.com:samuele-gatti/RubyOnRails.git"
+set :repository, "git@github.com:samuele-gatti/RubyonRailsWindows.git"
 set :branch, "master"
 set :use_sudo, true
 
