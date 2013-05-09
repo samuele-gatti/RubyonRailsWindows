@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  nome: MyString
+  ingredienti: MyText
+  prezzo: 9.99
+  link: 
+  listinPiadine_id: 1
+
+two:
+  nome: MyString
+  ingredienti: MyText
+  prezzo: 9.99
+  link: 
+  listinPiadine_id: 1
