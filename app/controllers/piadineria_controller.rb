@@ -1,8 +1,7 @@
 require 'net/http'
 
 class PiadineriaController < ApplicationController
-   
-  
+     
   #GET /piadineria/latitude/1/longitude/1
   #GET /piadineria/latitude/1/longitude/1.json
   def GetPiadinerie
@@ -74,7 +73,7 @@ class PiadineriaController < ApplicationController
 
     respond_to do |format|
       if @piadinerium.save
-        format.html { redirect_to @piadinerium, notice: 'Piadinerium was successfully created.' }
+        format.html { redirect_to @piadinerium, notice: 'La piadineria e\' stata creata correttamente.' }
         format.json { render json: @piadinerium, status: :created, location: @piadinerium }
       else
         format.html { render action: "new" }
@@ -90,7 +89,7 @@ class PiadineriaController < ApplicationController
 
     respond_to do |format|
       if @piadinerium.update_attributes(params[:piadinerium])
-        format.html { redirect_to @piadinerium, notice: 'Piadinerium was successfully updated.' }
+        format.html { redirect_to @piadinerium, notice: 'La piadinaria e\' stata aggiornata correttamente.' }
         format.json { head :no_content }
       else
         format.html { render action: "edit" }
