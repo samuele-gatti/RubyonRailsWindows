@@ -155,11 +155,8 @@ DEPENDENCIES
   coffee-rails (~> 3.2.1)
   geocoder
   jquery-rails
-<<<<<<< HEAD
   less-rails
-=======
   mocha
->>>>>>> 27e14681026c69899217028e7d5803db2756c7e6
   rails (= 3.2.13)
   sass-rails (~> 3.2.3)
   sqlite3
