@@ -1,9 +1,7 @@
-#require_relative "../validators/indirizzo_validator"
+#require File.expand_path('../../../lib/validators/indirizzo_validator', __FILE__)
 
 class Piadinerium < ActiveRecord::Base
- #include ActiveModel::Validations
-
-  attr_accessible :city, :address, :latitude, :longitude, :province, :ragioneSociale, :region
+   attr_accessible :city, :address, :latitude, :longitude, :province, :ragioneSociale, :region
   
   validates :ragioneSociale, :presence => true #{ :message => "La ragione sociale è un campo obbligatorio" }
   validates :ragioneSociale, :format => { :with => /\A[a-zA-Z]+\z/, :message => "sono ammesse soltanto le lettere" }
